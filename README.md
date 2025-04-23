@@ -7,9 +7,16 @@
 ### Mardi 22 avril 2025 :
 
 Sur fichier index.html :
-- Création navbar
-- Mise en place section search 
+- Ajout navbar
+- Ajout section search (non terminé)
 
 ### Mercredi 23 avril 2025 :
 
+Sur fichier index.html :
+- Suite section search
+- Ajout section profiles avec les photos
+- Ajout section how-it-works
+- Ajout section how-to-make-the-difference
+- Ajout footer
 
+### Jeudi 24 avril 2025 :
