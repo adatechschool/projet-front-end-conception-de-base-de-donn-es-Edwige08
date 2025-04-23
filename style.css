@@ -24,16 +24,18 @@
     --section-margin: 2rem 0;
     --container-width: 90%;
 }
-
 body {
     margin: 0;
     font-family: sans-serif;
 }
-
+h2 {
+    font-family: var(--font-family-heading);
+    font-size: 3.5rem;
+    margin: 0;
+}
 .secondary-color {
     color: var(--secondary-color);
 }
-
 .btn-secondary {
     background-color: var(--btn-secondary-bg);
     border-radius: 50px;
@@ -41,12 +43,13 @@ body {
     font-weight: bold;
     padding: 0.8rem 1.3rem;
     border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
 .btn-secondary:hover {
     background-color: var(--btn-secondary-hover-bg);
 }
-
 .btn-primary {
     background-color: var(--btn-primary-bg);
     border-radius: 50px;
@@ -54,6 +57,12 @@ body {
     font-weight: bold;
     padding: 0.8rem 1.3rem;
     border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover-bg);
 }
 
 /* *** *** *** HEADER SECTION *** *** *** */
@@ -65,28 +74,23 @@ header {
     background-color: var(--primary-color);
     font-family: sans-serif;
 }
-
 nav a {
     text-decoration: none;
     color: var(--heading-color);
 }
-
 nav a:hover {
     color: var(--secondary-color);
 }
-
 nav {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     font-weight: bold;
 }
-
 nav img {
     height: 1rem;
     margin-right: 0.3rem;
 }
-
 nav p {
     display: flex;
     align-items: center;
@@ -96,9 +100,7 @@ nav p {
 #search {
     position: relative;
     height: 27rem;
-
 }
-
 #search-image {
     /* position: absolute; */
     top: 0;
@@ -116,7 +118,6 @@ nav p {
     filter: brightness(60%);
     height: 27rem;
 }
-
 #search-presentation {
     position: absolute;
     display: flex;
@@ -128,19 +129,10 @@ nav p {
     height: 27rem;
     width: 100%;
 }
-
-h2 {
-    /* position: relative; */
-    font-family: var(--font-family-heading);
-    font-size: 3.5rem;
-    margin: 0;
-}
-
 #search p {
-    width: 45%;
+    width: 50%;
     text-align: center;
 }
-
 #search-zone {
     display: flex;
     flex-direction: row;
@@ -155,18 +147,16 @@ h2 {
     top: -40px;
     padding: 20px;
 }
-
 #search-zone label {
     display: flex;
     flex-direction: column;
     margin: 10px 10px;
     width: 100%;
-    color: var(--dark-color);
 }
-
 #search-zone label p {
     font-weight: bold;
     margin: 0 0 10px 0;
+    color: var(--dark-color);
 }
 #search-zone label select {
     height: 2.4rem;
@@ -174,15 +164,39 @@ h2 {
     padding-left: 10px;
     border-radius: var(--border-radius);
     border: solid 1px lightgrey;
+    color: var(--dark-color);
+}
+#search-zone label select:hover {
+    border: solid 1px black;
 }
 #search-zone label input {
     height: 2.2rem;
     padding-left: 10px;
     border-radius: var(--border-radius);
     border: solid 1px lightgrey;
+    color: var(--dark-color);
+}
+#search-zone label input:hover {
+    border: solid 1px black;
 }
 #search-zone button {
     width: 100%;
     height: 2.5rem;
     margin: 10px 10px;
+}
+
+/* *** *** *** PROFILES SECTION *** *** *** */
+#profiles-presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#profiles-presentation p {
+    width: 50%;
+    text-align: center;
+}
+#profiles {
+    display: grid;
 }
