@@ -27,6 +27,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background-color: var(--light-color);
 }
 h2 {
     font-family: var(--font-family-heading);
@@ -186,6 +187,9 @@ nav p {
 }
 
 /* *** *** *** PROFILES SECTION *** *** *** */
+#profiles-to-meet {
+    margin: var(--section-margin);
+}
 #profiles-presentation {
     display: flex;
     flex-direction: column;
@@ -199,4 +203,48 @@ nav p {
 }
 #profiles {
     display: grid;
+}
+#btn-more-profiles-div {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* *** *** *** HOW IT WORKS SECTION *** *** *** */
+#how-it-works {
+    background-color: white;
+    margin: var(--section-margin);
+}
+#how-it-works-presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+}
+#how-it-works-presentation p {
+    width: 50%;
+    text-align: center;
+}
+#how-it-works-steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#how-it-works-steps article {
+    box-shadow: var(--shadow-xl);
+    padding: 0 40px;
+    margin: 10px;
+    width: 15%;
+}
+.article-emoji {
+    text-align: center;
+    font-size: 2.4rem;
+}
+.article-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.article-text {
+    text-align: center;
 }
