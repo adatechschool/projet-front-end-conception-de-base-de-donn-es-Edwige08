@@ -14,6 +14,7 @@
     --btn-secondary-hover-bg: #333;
 
     --font-family-heading: 'Amatic SC', sans-serif;
+    --font-family-text: "Roboto", sans-serif;
     --border-radius: 8px;
 
     --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -26,14 +27,20 @@
 }
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: var(--font-family-text);
     background-color: var(--light-color);
+    line-height: 1.6rem;
 }
 h2 {
     font-family: var(--font-family-heading);
     font-size: 3.2rem;
-    margin: 0;
+    margin: 0 0 40px 0;
     text-transform: uppercase;
+}
+h3 {
+    font-family: var(--font-family-heading);
+    color: var(--secondary-color);
+    font-size: 2rem;
 }
 .secondary-color {
     color: var(--secondary-color);
@@ -52,6 +59,9 @@ h2 {
 }
 .btn-accent {
     background-color: var(--btn-accent-bg);
+}
+.btn-accent:hover {
+    background-color: var(--btn-primary-hover-bg);
 }
 button {
     border-radius: 50px;
@@ -84,9 +94,12 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: var(--primary-color);
-    font-family: sans-serif;
 }
 nav a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3rem;
     text-decoration: none;
     color: var(--heading-color);
 }
@@ -215,7 +228,7 @@ nav p {
 #how-it-works-steps article {
     box-shadow: var(--shadow-xl);
     padding: 0 40px;
-    margin: 10px;
+    margin: 10px 10px 70px 10px;
     width: 15%;
 }
 .article-emoji {
@@ -232,9 +245,61 @@ nav p {
 }
 
 /* *** *** *** READY TO MAKE THE DIFF SECTION *** *** *** */
+#ready-to-make-the-diff {
+    margin: var(--section-margin);
+}
 #multiple-btn-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
+/* *** *** *** READY TO MAKE THE DIFF SECTION *** *** *** */
+footer {
+    background-color: var(--dark-color);
+    margin: var(--section-margin);
+}
+#head-of-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+}
+footer section {
+    width: 100%;
+    padding: 0 20px;
+}
+.footer-paragraphs {
+    color: var(--light-color);
+}
+#logos-social-networks {
+    display: flex;
+    flex-direction: row;
+}
+.logo-lucide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #474747;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+}
+.lucide {
+}
+.footer-paragraphs a {
+    text-decoration: none;
+    color: #999999;
+}
+hr {
+    border-color: #999999;
+}
+#foot-of-footer {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    color: #999999;
+    text-align: center;
+}
