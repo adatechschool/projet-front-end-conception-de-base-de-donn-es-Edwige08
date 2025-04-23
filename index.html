@@ -6,21 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/vnd.icon" href="./images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
     <script defer type="module" src="script.js"></script>
     <title>Adaence</title>
 </head>
 
 <body>
-    <section id="header">
+    <header>
         <h1>☕ Ada<span class="secondary-color">ence</span></h1>
         <nav>
-            <a href="./index.html"><p><img src="./images/accueil.png" alt="Accueil"> Accueil</p></a>
-            <a><p><img src="./images/accueil.png" alt="Accueil"> Je rends visite</p></a>
-            <a><p><img src="./images/accueil.png" alt="Accueil"> Guide du partage</p></a>
-            <a><p><img src="./images/accueil.png" alt="Accueil"> Devenir bénévole</p></a>
+            <a href="./index.html">
+                <p><img src="./images/maison.png" alt="Accueil"> Accueil</p>
+            </a>
+            <a>
+                <p><img src="./images/fauteuil-roulant.png" alt="Je rends visite"> Je rends visite</p>
+            </a>
+            <a>
+                <p><img src="./images/livre-ouvert.png" alt="Guide du partage"> Guide du partage</p>
+            </a>
+            <a>
+                <p><img src="./images/donner.png" alt="Devenir bénévole"> Devenir bénévole</p>
+            </a>
         </nav>
         <button class="btn-secondary">Faire un don ❤</button>
+    </header>
+
+    <section id="search">
+        <div id="search-image"></div>
+
+        <div id="search-presentation">
+            <h2>Rétablissons les liens</h2>
+            <p>Et si vous offriez un peu de votre temps à ceux qui en ont le plus besoin ? Prenez rendez-vous pour
+                partager un moment avec une personne âgée isolée.</p>
+        </div>
     </section>
+
+    <div id="search-zone">
+        <label><p>Moments à partager</p>
+            <select name="nom" id="nom">
+                <option value="repas">Un repas</option>
+                <option value="cafe-the">Un café/thé</option>
+                <option value="promenade">Une promenade</option>
+                <option value="sortie-culturelle">Une sortie culturelle</option>
+                <option value="autre-activite">Autre activité</option>
+            </select>
+        </label>
+        <label><p>Localisation</p>
+            <input type="text" placeholder="Votre ville">
+        </label>
+        <button class="btn-primary">Rechercher 🔎</button>
+    </div>
+
 </body>
 
 </html>

@@ -6,7 +6,10 @@
 
 ### Mardi 22 avril 2025 :
 
-Objectifs du jour :
-[] ...
-[] ...
+Sur fichier index.html :
+- Création navbar
+- Mise en place section search 
+
+### Mercredi 23 avril 2025 :
+
 
