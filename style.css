@@ -31,6 +31,9 @@ body {
     background-color: var(--light-color);
     line-height: 1.6rem;
 }
+h1 {
+    color: var(--heading-color);
+}
 h2 {
     font-family: var(--font-family-heading);
     font-size: 3.2rem;
@@ -39,26 +42,31 @@ h2 {
 }
 h3 {
     font-family: var(--font-family-heading);
-    color: var(--secondary-color);
     font-size: 2rem;
 }
 .secondary-color {
     color: var(--secondary-color);
 }
+.light-color {
+    color: var(--light-color);
+}
 .btn-secondary {
     background-color: var(--btn-secondary-bg);
+    cursor: pointer;
 }
 .btn-secondary:hover {
     background-color: var(--btn-secondary-hover-bg);
 }
 .btn-primary {
     background-color: var(--btn-primary-bg);
+    cursor: pointer;
 }
 .btn-primary:hover {
     background-color: var(--btn-primary-hover-bg);
 }
 .btn-accent {
     background-color: var(--btn-accent-bg);
+    cursor: pointer;
 }
 .btn-accent:hover {
     background-color: var(--btn-primary-hover-bg);
@@ -75,6 +83,9 @@ button {
     height: 2.5rem;
     margin: 10px 10px;
 }
+.hover-underlined:hover {
+    text-decoration: underline;
+}
 .section-presentation {
     display: flex;
     flex-direction: column;
@@ -85,6 +96,9 @@ button {
 .section-presentation p {
     width: 50%;
     text-align: center;
+}
+a {
+    text-decoration: none;
 }
 
 /* *** *** *** HEADER SECTION *** *** *** */
@@ -100,7 +114,6 @@ nav a {
     flex-direction: row;
     align-items: center;
     gap: 0.3rem;
-    text-decoration: none;
     color: var(--heading-color);
 }
 nav a:hover {
@@ -127,7 +140,6 @@ nav p {
     height: 27rem;
 }
 #search-image {
-    /* position: absolute; */
     top: 0;
     left: 0;
     display: flex;
@@ -135,7 +147,6 @@ nav p {
     align-items: center;
     justify-content: center;
     background: url("./images/fiqih-pradana-qm-SgY--sVg-unsplash.jpg");
-    /* background-image: url("./images/fiqih-pradana-qm-SgY--sVg-unsplash.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -278,7 +289,7 @@ nav p {
     justify-content: center;
 }
 
-/* *** *** *** READY TO MAKE THE DIFF SECTION *** *** *** */
+/* *** *** *** FOOTER *** *** *** */
 footer {
     background-color: var(--dark-color);
     margin: var(--section-margin);
@@ -312,8 +323,7 @@ footer section {
 }
 .lucide {
 }
-.footer-paragraphs a {
-    text-decoration: none;
+.footer-paragraphs>a {
     color: #999999;
 }
 hr {
