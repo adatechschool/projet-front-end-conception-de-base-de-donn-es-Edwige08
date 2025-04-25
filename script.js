@@ -103,7 +103,8 @@ const displayProfilesWithFilters = (listOfProfiles, activity, city) => {
 displayProfiles(allProfiles);
 
 // LES EVENT LISTENERS : ------------------------------------------------
-searchMoment.addEventListener('click', () => {
+searchMoment.addEventListener('click', (event) => {
+    event.preventDefault();
     if (searchCity.value === '') {
         searchCity.focus();
         searchCity.style.background = ' #ffc412'
