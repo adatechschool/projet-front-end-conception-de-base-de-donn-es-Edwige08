@@ -11,6 +11,7 @@ const searchResults = document.querySelector('#search-results')
 const moments = document.querySelector('#moments');
 const searchCity = document.querySelector('#search-city');
 const amountOfMoments = document.querySelector('#amount-of-moments')
+const noResultSection = document.querySelector('#no-result-section')
 
 // LES FONCTIONS : ------------------------------------------------------
 const creatingProfileCards = (profiles) => {
@@ -57,6 +58,7 @@ const creatingProfileCards = (profiles) => {
 }
 const displayProfiles = (listOfProfiles) => {
     searchResults.innerText = '';
+    noResultSection.innerText = '';
     let numberOfResults = 0;
     for (let x = 0; x < listOfProfiles.length; x++) {
         numberOfResults++;
@@ -71,6 +73,7 @@ const displayProfiles = (listOfProfiles) => {
 
 const displayProfilesWithFilters = (listOfProfiles, activity, city) => {
     searchResults.innerText = '';
+    noResultSection.innerText = '';
     let numberOfResults = 0;
     for (let x = 0; x < listOfProfiles.length; x++) {
         if (listOfProfiles[x].type === activity) {
@@ -88,11 +91,15 @@ const displayProfilesWithFilters = (listOfProfiles, activity, city) => {
     }
     if (numberOfResults === 0) {
         amountOfMoments.innerText = `${numberOfResults} moment trouvé`
-        searchResults.innerText = '';
+        noResultSection.innerText = '';
         const noResultDiv = document.createElement('p');
         noResultDiv.classList.add('no-result');
-        noResultDiv.innerText = "Nous sommes désolés, mais nous n'avons pas de résultat pour la ville que vous avez entrée.";
-        searchResults.appendChild(noResultDiv);
+        noResultDiv.innerText = `😢
+        Nous sommes désolés, nous n'avons aucun résultat pour vos critères de recherche.
+        Nous pouvons vous conseiller : de sélectionner "Tous les moments", 
+        de vérifier que vous avez bien orthographié le nom de la ville 
+        ou de refaire votre recherche dans une autre ville.`;
+        noResultSection.appendChild(noResultDiv);
     }
     if (numberOfResults < 2) {
         amountOfMoments.innerText = `${numberOfResults} moment trouvé`

@@ -424,3 +424,10 @@ hr {
     width: fit-content;
     /* margin-top: auto; */
 }
+.no-result {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    box-sizing: border-box;
+}
