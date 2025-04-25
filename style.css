@@ -108,6 +108,7 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
 }
 nav a {
     display: flex;
@@ -160,19 +161,23 @@ nav p {
     color: var(--primary-color);
     height: 27rem;
 }
+#searchbar {
+    margin: 0 auto;
+    width: 60%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    background-color: white;
+    padding: 20px;
+    position: relative;
+}
 #search-zone {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    width: 60%;
-    margin: 0 auto;
-    background-color: white;
-    position: relative;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-md);
+}
+.div-go-up {
     top: -40px;
-    padding: 20px;
 }
 #search-zone label {
     display: flex;
@@ -209,6 +214,19 @@ nav p {
 #search-zone button {
     width: 100%;
 }
+#searchbar-infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#reset-filters {
+    color: var(--btn-accent-bg);
+    text-decoration: underline;
+    cursor: pointer;
+}
+#reset-filters:hover {
+    color: var(--accent-color);
+}
 
 /* *** *** *** PROFILES SECTION *** *** *** */
 #profiles-to-meet {
@@ -224,7 +242,6 @@ nav p {
     box-sizing: border-box;
 }
 #profiles img {
-    object-fit: cover;
     object-fit: cover;
     border-radius: var(--border-radius);
     width: 100%;
@@ -336,4 +353,74 @@ hr {
     padding: 0;
     color: #999999;
     text-align: center;
+}
+
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+/* *** *** *** *** *** *** PAGE SEARCH *** *** *** *** *** *** */
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+/* *** *** *** SEARCH SECTION *** *** *** */
+#search-section {
+    padding: 30px;
+}
+
+/* *** *** *** SEARCH RESULTS *** *** *** */
+#search-results {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 40px;
+    /* box-sizing: border-box; */
+}
+.profile-article {
+    /* object-fit: cover; */
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    /* width: 20%; */
+    /* height: 100%; */
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+.profile-img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    overflow: hidden;
+}
+.profile-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.profile-details-div {
+    padding: 20px;
+    color: var(--dark-color);
+}
+.profile-moment {
+    margin: 0;
+    font-weight: bold;
+}
+.profile-name {
+    margin: 5px 0;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+.profile-job-age {
+    margin: 0;
+}
+.profile-city {
+    margin: 0;
+}
+.profile-description {
+    margin: 5px 0;
+    font-weight: bold;
+}
+.profile-article button {
+    margin: auto 25px 20px 25px;
+    width: fit-content;
+    /* margin-top: auto; */
 }

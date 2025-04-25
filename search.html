@@ -37,7 +37,38 @@
         <button class="btn-secondary">Faire un don ❤</button>
     </header>
 
+    <section id="search-section">
 
+        <div id="searchbar">
+            <div id="search-zone">
+                <label><p>Moments à partager</p>
+                    <select name="moments" id="moments">
+                        <option value="all-moments">Tous les moments possibles</option>
+                        <option value="Un repas">Un repas</option>
+                        <option value="Un café/thé">Un café/thé</option>
+                        <option value="Une promenade">Une promenade</option>
+                        <option value="Une sortie culturelle">Une sortie culturelle</option>
+                        <option value="Autre activité">Autre activité</option>
+                    </select>
+                </label>
+                <label><p>Localisation</p>
+                    <input type="text" placeholder="Votre ville" id="search-city">
+                </label>
+                <button class="btn-primary" type="submit">Rechercher 🔎</button>
+            </div>
+    
+            <div id="searchbar-infos">
+                <p id="amount-of-moments">Nombre de moments trouvés</p>
+                <p id="reset-filters">Réinitialiser les filtres</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="search-results">
+
+    </section>
 
     <footer>
         <section id="head-of-footer">
