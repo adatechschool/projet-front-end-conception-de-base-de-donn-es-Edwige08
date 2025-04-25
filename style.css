@@ -136,7 +136,7 @@ nav p {
 }
 
 /* *** *** *** SEARCH SECTION *** *** *** */
-#search {
+#search, #volunteer-section {
     position: relative;
     height: 27rem;
 }
@@ -155,7 +155,7 @@ nav p {
     filter: brightness(60%);
     height: 27rem;
 }
-#search-presentation {
+#search-presentation, #volunteer-presentation {
     position: absolute;
     top: 0;
     color: var(--primary-color);
@@ -431,3 +431,91 @@ hr {
     padding: 20px;
     box-sizing: border-box;
 }
+
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+/* *** *** *** *** *** *** PAGE VOLUNTEER *** *** *** *** *** *** */
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+/* *** *** *** VOLUNTEER SECTION *** *** *** */
+#volunteer-image {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("./images/hannah-busing-Zyx1bK9mqmA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(20px);
+    filter: brightness(60%);
+    height: 27rem;
+}
+.red-star {
+    color: red;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+#form-div {
+    margin: 0 auto;
+    width: 60%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+    background-color: white;
+    padding: 60px 30px 20px 30px;
+    position: relative;
+}
+#form-zone {
+    display: flex;
+    flex-direction: column;
+}
+#form-zone label {
+    width: 100%;
+}
+#form-zone p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+#form-zone select {
+    width: 100%;
+    height: 2.4rem;
+    font-weight: bold;
+    padding-left: 10px;
+    border-radius: var(--border-radius);
+    border: solid 1px lightgrey;
+    color: var(--dark-color);
+    box-sizing: border-box;
+}
+#form-zone select:hover {
+    border: solid 1px black;
+}
+#form-zone input {
+    width: 100%;
+    height: 2.2rem;
+    padding-left: 10px;
+    border-radius: var(--border-radius);
+    border: solid 1px lightgrey;
+    color: var(--dark-color);
+    box-sizing: border-box;
+}
+#form-zone input:hover {
+    border: solid 1px black;
+}
+.div-to-center-button {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* Je n'arrive pas à modifier la hauteur de cet input ci-dessous : */
+#volunteer-motivation {
+    height: 300rem; 
+}
+/*  */
+
