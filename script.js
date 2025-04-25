@@ -113,3 +113,9 @@ searchMoment.addEventListener('click', (event) => {
         displayProfilesWithFilters(allProfiles, moments.value, searchCity.value);
     }
 })
+
+resetFilters.addEventListener('click', () => {
+    moments.value = 'all-moments';
+    searchCity.value = '';
+    displayProfiles(allProfiles)
+})
