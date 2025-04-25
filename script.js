@@ -104,5 +104,11 @@ displayProfiles(allProfiles);
 
 // LES EVENT LISTENERS : ------------------------------------------------
 searchMoment.addEventListener('click', () => {
+    if (searchCity.value === '') {
+        searchCity.focus();
+        searchCity.style.background = ' #ffc412'
+    } else {
+        searchCity.style.background = ''
         displayProfilesWithFilters(allProfiles, moments.value, searchCity.value);
+    }
 })
