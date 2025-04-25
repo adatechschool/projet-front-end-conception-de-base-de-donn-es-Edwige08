@@ -20,3 +20,15 @@ Sur fichier index.html :
 - Ajout footer
 
 ### Jeudi 24 avril 2025 :
+
+ Sur fichier search.html : 
+ - Ajout du header et footer (idem index.html)
+ - Ajout et modification de la section search
+
+ Sur fichier script.js : 
+ - Création fonction displayProfiles()
+ - Création fonction displayProfilesWithFilters() (mais non terminée, elle ne prend en compte que le filtre de l'activité, manque la ville)
+
+ ### Vendredi 25 avril 2025 :
+
+ 
