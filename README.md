@@ -42,3 +42,11 @@
  
  Sur le fichier sql.sql :
  - Création de ce fichier, qui comprend le lien drawSQL et les commandes entrées pour création de la BDD
+ 
+ Sur fichier volunteer.html : 
+ - Mise à jour du CSS pour la partie formulaire
+ - Mise à jour de la partie témoignage (taille des photos)
+ - Ajout de la partie "Des questions ?"
+
+### Mardi 29 avril 2025 :
+
