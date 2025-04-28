@@ -265,19 +265,19 @@ nav p {
 }
 
 /* *** *** *** HOW IT WORKS SECTION *** *** *** */
-#how-it-works {
+#how-it-works, #how-to-become-volunteer {
     background-color: white;
     margin: var(--section-margin);
 }
-#how-it-works-presentation {
+#how-it-works-presentation, #how-to-become-volunteer-presentation {
     padding: 40px 0;
 }
-#how-it-works-steps {
+#how-it-works-steps, #how-to-become-volunteer-steps {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-#how-it-works-steps article {
+#how-it-works-steps article, #how-to-become-volunteer-steps article {
     box-shadow: var(--shadow-xl);
     padding: 0 40px;
     margin: 10px 10px 70px 10px;
@@ -515,7 +515,43 @@ hr {
 
 /* Je n'arrive pas à modifier la hauteur de cet input ci-dessous : */
 #volunteer-motivation {
-    height: 300rem; 
+    height: 10rem; 
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: var(--border-radius);
+    border: solid 1px lightgrey;
+    color: var(--dark-color);
+    box-sizing: border-box;
+    font-family: var(--font-family-text);
 }
-/*  */
 
+/* *** *** *** TESTIMONY SECTION *** *** *** */
+#volunteer-testimony {
+    background-color: var(--light-color);
+}
+.testimony-article {
+    box-shadow: var(--shadow-md);
+    padding: 20px;
+    margin: 20px;
+}
+.head-of-article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.testimony-img {
+    border-radius: 50%;
+    /* height: 100%; */
+    /* width: 100%; */
+    object-fit: cover;
+}
+.bold {
+    font-weight: bold;
+}
+.testimony-article-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}

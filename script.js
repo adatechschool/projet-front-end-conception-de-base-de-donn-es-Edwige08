@@ -55,6 +55,10 @@ const creatingProfileCards = (profiles) => {
     profileArticle.appendChild(profileDetailsDiv);
     profileArticle.appendChild(profileButton);
     searchResults.appendChild(profileArticle);
+
+    profileButton.addEventListener('click', () => {
+        console.log(`Nom de l'aîné : ${profiles.firstname} // Son moment favori : ${profiles.type}`)
+    })
 }
 const displayProfiles = (listOfProfiles) => {
     searchResults.innerText = '';
