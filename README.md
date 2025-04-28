@@ -6,18 +6,18 @@
 
 ### Mardi 22 avril 2025 :
 
-Sur fichier index.html :
-- Ajout navbar
-- Ajout section search (non terminé)
+ Sur fichier index.html :
+ - Ajout navbar
+ - Ajout section search (non terminé)
 
 ### Mercredi 23 avril 2025 :
 
-Sur fichier index.html :
-- Suite section search
-- Ajout section profiles avec les photos
-- Ajout section how-it-works
-- Ajout section how-to-make-the-difference
-- Ajout footer
+ Sur fichier index.html :
+ - Suite section search
+ - Ajout section profiles avec les photos
+ - Ajout section how-it-works
+ - Ajout section how-to-make-the-difference
+ - Ajout footer
 
 ### Jeudi 24 avril 2025 :
 
@@ -29,6 +29,16 @@ Sur fichier index.html :
  - Création fonction displayProfiles()
  - Création fonction displayProfilesWithFilters() (mais non terminée, elle ne prend en compte que le filtre de l'activité, manque la ville)
 
- ### Vendredi 25 avril 2025 :
+### Vendredi 25 avril 2025 :
 
+ Sur fichier search.html : 
+ - ajout fonctionnalité "Réinitialisation des résultats"
+ - gestion du message en l'absence de résultats
+
+ Sur fichier volunteer.html : 
+ - ajout du contenu de la page
+
+### Lundi 28 avril 2025 :
  
+ Sur le fichier sql.sql :
+ - Création de ce fichier, qui comprend le lien drawSQL et les commandes entrées pour création de la BDD
