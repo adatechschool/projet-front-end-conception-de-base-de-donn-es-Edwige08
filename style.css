@@ -521,16 +521,24 @@ hr {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     padding: 40px;
-    /* box-sizing: border-box; */
+
+    @media screen and (max-width: 850px) {
+        grid-template-columns: repeat(3, 1fr);
+
+        @media screen and (max-width: 700px) {
+            grid-template-columns: repeat(2, 1fr);
+
+            @media screen and (max-width: 450px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
 }
 
 .profile-article {
-    /* object-fit: cover; */
     display: flex;
     flex-direction: column;
     border-radius: var(--border-radius);
-    /* width: 20%; */
-    /* height: 100%; */
     overflow: hidden;
     box-shadow: var(--shadow-md);
 }
