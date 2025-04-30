@@ -13,6 +13,7 @@
         rel="stylesheet">
     <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
     <script defer type="module" src="script.js"></script>
+    <script src="./sidenav.js" defer></script>
     <title>Adaence</title>
 </head>
 
@@ -21,6 +22,73 @@
         <img src="./maquette/maquette_accueil.png" alt="" style="width: 100%;">
     </div> -->
     <header>
+
+        <div id="my-side-nav">
+            <a id="close-side-nav-btn" href="#">x</a>
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-house-icon lucide-house">
+                            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                            <path
+                                d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                        </svg>
+                        <p>Accueil</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./search.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-accessibility-icon lucide-accessibility">
+                            <circle cx="16" cy="4" r="1" />
+                            <path d="m18 19 1-7-6 1" />
+                            <path d="m5 8 3-3 5.5 3-2.36 3.5" />
+                            <path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
+                            <path d="M13.76 17.5a5 5 0 0 0-6.88-6" />
+                        </svg>
+                        <p>Je rends visite</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-book-open-icon lucide-book-open">
+                            <path d="M12 7v14" />
+                            <path
+                                d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
+                        </svg>
+                        <p>Guide du partage</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./volunteer.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-hand-helping-icon lucide-hand-helping">
+                            <path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14" />
+                            <path
+                                d="m7 18 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" />
+                            <path d="m2 13 6 6" />
+                        </svg>
+                        <p>Devenir bénévole</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <a href="#" id="open-side-nav-btn">
+            <span class="buger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </a>
+
+
         <a href="./index.html">
             <h1>☕ Ada<span class="secondary-color">ence</span></h1>
         </a>
@@ -69,7 +137,7 @@
                 <p>Devenir bénévole</p>
             </a>
         </nav>
-        <button class="btn-secondary">Faire un don ❤</button>
+        <button id="donate-navbar" class="btn-secondary">Faire un don ❤</button>
     </header>
 
     <section id="volunteer-section">
@@ -126,7 +194,8 @@
             <label>
                 <p>Votre motivation <span class="red-star">*</span></p>
                 <textarea name="volunteer-motivation" id="volunteer-motivation"
-                    placeholder="Parlez-nous de votre motivation à devenir bénévole chez Adaence..." required="required"></textarea>
+                    placeholder="Parlez-nous de votre motivation à devenir bénévole chez Adaence..."
+                    required="required"></textarea>
             </label>
             <div class="div-to-center-button">
                 <a href="#"><button class="btn-accent">Envoyer ma candidature</button></a>
@@ -240,7 +309,7 @@
             <a href="#"><button class="btn-primary">Foire aux questions</button></a>
             <a href="#"><button class="btn-secondary">Contactez-nous</button></a>
         </div>
-        
+
     </section>
 
 

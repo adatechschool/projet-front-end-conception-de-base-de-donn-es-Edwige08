@@ -32,11 +32,11 @@
 ### Vendredi 25 avril 2025 :
 
  Sur fichier search.html : 
- - ajout fonctionnalité "Réinitialisation des résultats"
- - gestion du message en l'absence de résultats
+ - Ajout fonctionnalité "Réinitialisation des résultats"
+ - Gestion du message en l'absence de résultats
 
  Sur fichier volunteer.html : 
- - ajout du contenu de la page
+ - Ajout du contenu de la page
 
 ### Lundi 28 avril 2025 :
  
@@ -50,3 +50,13 @@
 
 ### Mardi 29 avril 2025 :
 
+ Sur fichier volunteer.html : 
+ - Champs mis en "required"
+
+ Sur fichier index.html :
+ - Le bouton "Rechercher" mène maintenant vers la page search.html avec les critères sélectionnés
+
+### Mercredi 30 avril 2025 :
+
+ Sur le fichier style.css : 
+ - Ajout de responsive
