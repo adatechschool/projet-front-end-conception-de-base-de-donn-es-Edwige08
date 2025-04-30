@@ -83,7 +83,7 @@
     </section>
 
     <div id="searchbar" class="div-go-up">
-        <form id="search-zone">
+        <form action="/search.html" id="search-zone">
             <label>
                 <p>Moments à partager</p>
                 <select name="moments" id="moments">
@@ -97,9 +97,9 @@
             </label>
             <label>
                 <p>Localisation</p>
-                <input type="text" placeholder="Votre ville" id="search-city">
+                <input type="text" name="city" placeholder="Votre ville" id="search-city" required="required">
             </label>
-            <a href="./search.html"><button class="btn-primary">Rechercher 🔎</button></a>
+            <button type="submit" class="btn-primary">Rechercher 🔎</button>
         </form>
     </div>
 

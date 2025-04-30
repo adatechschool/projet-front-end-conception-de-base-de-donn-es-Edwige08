@@ -86,12 +86,13 @@ const displayProfilesWithFilters = (listOfProfiles, activity, city) => {
                 creatingProfileCards(listOfProfiles[x]);
             }
         } 
-        if (moments.value === 'all-moments') {
+        else if (moments.value === 'all-moments') {
             if (listOfProfiles[x].city.toLowerCase() === city.toLowerCase()) {
                 numberOfResults++;
                 creatingProfileCards(listOfProfiles[x]);
             }
         }
+        //  JE DOIS RAJOUTER UN ELSE ICI
     }
     if (numberOfResults === 0) {
         amountOfMoments.innerText = `${numberOfResults} moment trouvé`
@@ -111,7 +112,15 @@ const displayProfilesWithFilters = (listOfProfiles, activity, city) => {
         amountOfMoments.innerText = `${numberOfResults} moments trouvés`
     }
 }
-displayProfiles(allProfiles);
+
+let url = new URL(window.location.toString());
+let params = new URLSearchParams(url.search);
+
+if (params.get('city') != null) {
+    displayProfilesWithFilters(allProfiles, params.get('moments'), params.get('city'));
+} else {
+    displayProfiles(allProfiles);
+}
 
 // LES EVENT LISTENERS : ------------------------------------------------
 searchMoment.addEventListener('click', (event) => {
