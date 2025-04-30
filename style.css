@@ -25,52 +25,67 @@
     --section-margin: 2rem 0;
     --container-width: 90%;
 }
+
 body {
     margin: 0;
     font-family: var(--font-family-text);
     background-color: var(--light-color);
     line-height: 1.6rem;
 }
+
 h1 {
     color: var(--heading-color);
 }
+
 h2 {
     font-family: var(--font-family-heading);
     font-size: 3.2rem;
     margin: 0 0 40px 0;
     text-transform: uppercase;
+    text-align: center;
+    line-height: normal;
 }
+
 h3 {
     font-family: var(--font-family-heading);
     font-size: 2rem;
 }
+
 .secondary-color {
     color: var(--secondary-color);
 }
+
 .light-color {
     color: var(--light-color);
 }
+
 .btn-secondary {
     background-color: var(--btn-secondary-bg);
     cursor: pointer;
 }
+
 .btn-secondary:hover {
     background-color: var(--btn-secondary-hover-bg);
 }
+
 .btn-primary {
     background-color: var(--btn-primary-bg);
     cursor: pointer;
 }
+
 .btn-primary:hover {
     background-color: var(--btn-primary-hover-bg);
 }
+
 .btn-accent {
     background-color: var(--btn-accent-bg);
     cursor: pointer;
 }
+
 .btn-accent:hover {
     background-color: var(--btn-primary-hover-bg);
 }
+
 button {
     border-radius: 50px;
     color: white;
@@ -83,9 +98,11 @@ button {
     height: 2.5rem;
     margin: 10px 10px;
 }
+
 .hover-underlined:hover {
     text-decoration: underline;
 }
+
 .section-presentation {
     display: flex;
     flex-direction: column;
@@ -93,10 +110,16 @@ button {
     justify-content: center;
     width: 100%;
 }
+
 .section-presentation p {
     width: 50%;
     text-align: center;
+
+    @media screen and (max-width: 660px) {
+        width: 75%;
+    }
 }
+
 a {
     text-decoration: none;
 }
@@ -110,6 +133,7 @@ header {
     background-color: var(--primary-color);
     box-shadow: var(--shadow-lg);
 }
+
 nav a {
     display: flex;
     flex-direction: row;
@@ -117,29 +141,39 @@ nav a {
     gap: 0.3rem;
     color: var(--heading-color);
 }
+
 nav a:hover {
     color: var(--secondary-color);
 }
+
 nav {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     font-weight: bold;
 }
+
 nav img {
     height: 1rem;
     margin-right: 0.3rem;
 }
+
 nav p {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 929px) {
+        display: none;
+    }
 }
 
 /* *** *** *** SEARCH SECTION *** *** *** */
-#search, #volunteer-section {
+#search,
+#volunteer-section {
     position: relative;
     height: 27rem;
 }
+
 #search-image {
     top: 0;
     left: 0;
@@ -154,13 +188,17 @@ nav p {
     backdrop-filter: blur(20px);
     filter: brightness(60%);
     height: 27rem;
+    width: 100%;
 }
-#search-presentation, #volunteer-presentation {
+
+#search-presentation,
+#volunteer-presentation {
     position: absolute;
     top: 0;
     color: var(--primary-color);
     height: 27rem;
 }
+
 #searchbar {
     margin: 0 auto;
     width: 60%;
@@ -169,27 +207,41 @@ nav p {
     background-color: white;
     padding: 20px;
     position: relative;
+
+    @media screen and (max-width: 980px) {
+        width: 80%;
+    }
 }
+
 #search-zone {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+
+    @media screen and (max-width: 735px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
 .div-go-up {
     top: -40px;
 }
+
 #search-zone label {
     display: flex;
     flex-direction: column;
     margin: 10px 10px;
     width: 100%;
 }
+
 #search-zone label p {
     font-weight: bold;
     margin: 0 0 10px 0;
     color: var(--dark-color);
 }
+
 #search-zone label select {
     height: 2.4rem;
     font-weight: bold;
@@ -198,9 +250,11 @@ nav p {
     border: solid 1px lightgrey;
     color: var(--dark-color);
 }
+
 #search-zone label select:hover {
     border: solid 1px black;
 }
+
 #search-zone label input {
     height: 2.2rem;
     padding-left: 10px;
@@ -208,22 +262,27 @@ nav p {
     border: solid 1px lightgrey;
     color: var(--dark-color);
 }
+
 #search-zone label input:hover {
     border: solid 1px black;
 }
+
 #search-zone button {
     width: 100%;
 }
+
 #searchbar-infos {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
 #reset-filters {
     color: var(--btn-accent-bg);
     text-decoration: underline;
     cursor: pointer;
 }
+
 #reset-filters:hover {
     color: var(--accent-color);
 }
@@ -232,6 +291,7 @@ nav p {
 #profiles-to-meet {
     margin: var(--section-margin);
 }
+
 #profiles {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -240,58 +300,99 @@ nav p {
     grid-gap: 10px;
     padding: 40px;
     box-sizing: border-box;
+
+    @media screen and (max-width: 770px) {
+        grid-template-rows: repeat(3, 8rem);
+
+        @media screen and (max-width: 560px) {
+            grid-template-rows: repeat(3, 4rem);
+        }
+    }
 }
+
 #profiles img {
     object-fit: cover;
     border-radius: var(--border-radius);
     width: 100%;
     height: 100%;
 }
-.img1, .img3, .img6, .img8 {
+
+.img1,
+.img3,
+.img6,
+.img8 {
     grid-row: span 2;
 }
+
 .img5 {
     grid-column-start: 1;
     grid-row-start: 3;
 }
+
 .img7 {
     grid-row-start: 3;
     grid-column-start: 3;
 }
+
 #btn-more-profiles-div {
     display: flex;
     justify-content: center;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 /* *** *** *** HOW IT WORKS SECTION *** *** *** */
-#how-it-works, #how-to-become-volunteer {
+#how-it-works,
+#how-to-become-volunteer {
     background-color: white;
     margin: var(--section-margin);
 }
-#how-it-works-presentation, #how-to-become-volunteer-presentation {
+
+#how-it-works-presentation,
+#how-to-become-volunteer-presentation {
     padding: 40px 0;
+    box-sizing: border-box;
 }
-#how-it-works-steps, #how-to-become-volunteer-steps {
+
+#how-it-works-steps,
+#how-to-become-volunteer-steps {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+
+    @media screen and (max-width: 880px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
-#how-it-works-steps article, #how-to-become-volunteer-steps article {
+
+#how-it-works-steps article,
+#how-to-become-volunteer-steps article {
     box-shadow: var(--shadow-xl);
     padding: 0 40px;
     margin: 10px 10px 70px 10px;
     width: 15%;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 880px) {
+        width: 80%;
+        margin: 10px;
+    }
+
+    ;
 }
+
 .article-emoji {
     text-align: center;
     font-size: 2.4rem;
 }
+
 .article-title {
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
 }
+
 .article-text {
     text-align: center;
 }
@@ -300,10 +401,16 @@ nav p {
 #ready-to-make-the-diff {
     margin: var(--section-margin);
 }
+
 #multiple-btn-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    @media screen and (max-width: 580px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* *** *** *** FOOTER *** *** *** */
@@ -311,23 +418,65 @@ footer {
     background-color: var(--dark-color);
     margin: var(--section-margin);
 }
+
 #head-of-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
+
+    @media screen and (max-width: 660px) {
+        flex-direction: column;
+        ;
+    }
 }
+
+.little-screen {
+    display: none;
+
+    @media screen and (max-width: 660px) {
+        display: flex;
+
+        @media screen and (max-width: 580px) {
+            display: none;
+        }
+    }
+}
+
 footer section {
     width: 100%;
     padding: 0 20px;
+    box-sizing: border-box;
 }
+
 .footer-paragraphs {
     color: var(--light-color);
 }
+
+#informations-links {
+    @media screen and (max-width: 660px) {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        @media screen and (max-width: 580px) {
+            flex-direction: column;
+            gap: 0;
+        }
+    }
+}
+
+#informations-links p {
+    @media screen and (max-width: 580px) {
+        margin: 0;
+    }
+}
+
 #logos-social-networks {
     display: flex;
     flex-direction: row;
 }
+
 .logo-lucide {
     display: flex;
     justify-content: center;
@@ -338,14 +487,15 @@ footer section {
     width: 40px;
     margin-right: 15px;
 }
-.lucide {
-}
+
 .footer-paragraphs>a {
     color: #999999;
 }
+
 hr {
     border-color: #999999;
 }
+
 #foot-of-footer {
     display: flex;
     justify-content: center;
@@ -373,6 +523,7 @@ hr {
     padding: 40px;
     /* box-sizing: border-box; */
 }
+
 .profile-article {
     /* object-fit: cover; */
     display: flex;
@@ -383,6 +534,7 @@ hr {
     overflow: hidden;
     box-shadow: var(--shadow-md);
 }
+
 .profile-img-div {
     display: flex;
     justify-content: center;
@@ -390,40 +542,49 @@ hr {
     height: 200px;
     overflow: hidden;
 }
+
 .profile-img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
 }
+
 .profile-details-div {
     padding: 20px;
     color: var(--dark-color);
 }
+
 .profile-moment {
     margin: 0;
     font-weight: bold;
 }
+
 .profile-name {
     margin: 5px 0;
     font-weight: bold;
     color: var(--accent-color);
 }
+
 .profile-job-age {
     margin: 0;
 }
+
 .profile-city {
     margin: 0;
 }
+
 .profile-description {
     margin: 5px 0;
     font-weight: bold;
 }
+
 .profile-article button {
     margin: auto 25px 20px 25px;
     width: fit-content;
     /* margin-top: auto; */
 }
+
 .no-result {
     width: 100%;
     text-align: center;
@@ -453,14 +614,17 @@ hr {
     filter: brightness(60%);
     height: 27rem;
 }
+
 .red-star {
     color: red;
 }
+
 .flex-row {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
+
 #form-div {
     margin: 0 auto;
     width: 60%;
@@ -470,18 +634,22 @@ hr {
     padding: 60px 30px 20px 30px;
     position: relative;
 }
+
 #form-zone {
     display: flex;
     flex-direction: column;
 }
+
 #form-zone label {
     width: 100%;
 }
+
 #form-zone p {
     margin-bottom: 5px;
     font-weight: bold;
     box-sizing: border-box;
 }
+
 #form-zone select {
     width: 100%;
     height: 2.4rem;
@@ -492,9 +660,11 @@ hr {
     color: var(--dark-color);
     box-sizing: border-box;
 }
+
 #form-zone select:hover {
     border: solid 1px black;
 }
+
 #form-zone input {
     width: 100%;
     height: 2.2rem;
@@ -504,9 +674,11 @@ hr {
     color: var(--dark-color);
     box-sizing: border-box;
 }
+
 #form-zone input:hover {
     border: solid 1px black;
 }
+
 .div-to-center-button {
     display: flex;
     justify-content: center;
@@ -515,7 +687,7 @@ hr {
 
 /* Je n'arrive pas à modifier la hauteur de cet input ci-dessous : */
 #volunteer-motivation {
-    height: 10rem; 
+    height: 10rem;
     width: 100%;
     padding: 10px 10px;
     border-radius: var(--border-radius);
@@ -529,26 +701,31 @@ hr {
 #volunteer-testimony {
     background-color: var(--light-color);
 }
+
 .testimony-article {
     box-shadow: var(--shadow-md);
     padding: 20px;
     margin: 20px;
 }
+
 .head-of-article {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
 }
+
 .testimony-img {
     border-radius: 50%;
     height: 60px;
     width: 60px;
     object-fit: cover;
 }
+
 .bold {
     font-weight: bold;
 }
+
 .testimony-article-text {
     display: flex;
     flex-direction: row;
