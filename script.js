@@ -1,6 +1,8 @@
 import { allProfiles } from "./profiles.js";
 
-// LES VARIABLES : ------------------------------------------------------
+// ---------------------------------------------------------------------- //
+// LES VARIABLES : ------------------------------------------------------ //
+// ---------------------------------------------------------------------- //
 
 // Boutons : 
 const searchMoment = document.querySelector('#search-zone>button')
@@ -13,7 +15,15 @@ const searchCity = document.querySelector('#search-city');
 const amountOfMoments = document.querySelector('#amount-of-moments')
 const noResultSection = document.querySelector('#no-result-section')
 
-// LES FONCTIONS : ------------------------------------------------------
+// URL Search Params : 
+let url = new URL(window.location.toString());
+let params = new URLSearchParams(url.search);
+
+// ---------------------------------------------------------------------- //
+// LES FONCTIONS : ------------------------------------------------------ //
+// ---------------------------------------------------------------------- //
+
+// Fonction qui permet l'affichage d'une carte profil :
 const creatingProfileCards = (profiles) => {
     const profileArticle = document.createElement('article');
     const profileImgDiv = document.createElement('div');
@@ -60,6 +70,8 @@ const creatingProfileCards = (profiles) => {
         console.log(`Nom de l'aîné : ${profiles.firstname} // Son moment favori : ${profiles.type}`)
     })
 }
+
+// Fonction qui affiche toutes les cartes profil : 
 const displayProfiles = (listOfProfiles) => {
     searchResults.innerText = '';
     noResultSection.innerText = '';
@@ -75,6 +87,7 @@ const displayProfiles = (listOfProfiles) => {
     }
 }
 
+// Fonction qui affiche toutes les cartes profil en fonction des paramètres de recherche : 
 const displayProfilesWithFilters = (listOfProfiles, activity, city) => {
     searchResults.innerText = '';
     noResultSection.innerText = '';
@@ -113,16 +126,18 @@ const displayProfilesWithFilters = (listOfProfiles, activity, city) => {
     }
 }
 
-let url = new URL(window.location.toString());
-let params = new URLSearchParams(url.search);
-
+// Affiche dans search.html les résultats de la recherche faite dans index.html s'il y a :
 if (params.get('city') != null) {
     displayProfilesWithFilters(allProfiles, params.get('moments'), params.get('city'));
 } else {
     displayProfiles(allProfiles);
 }
 
-// LES EVENT LISTENERS : ------------------------------------------------
+// ---------------------------------------------------------------------- //
+// LES EVENT LISTENERS : ------------------------------------------------ //
+// ---------------------------------------------------------------------- //
+
+// Bouton "Rechercher 🔎" :
 searchMoment.addEventListener('click', (event) => {
     event.preventDefault();
     if (searchCity.value === '') {
@@ -134,6 +149,7 @@ searchMoment.addEventListener('click', (event) => {
     }
 })
 
+// Bouton "Réinitialiser les filtres" : 
 resetFilters.addEventListener('click', () => {
     moments.value = 'all-moments';
     searchCity.value = '';
