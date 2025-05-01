@@ -59,4 +59,12 @@
 ### Mercredi 30 avril 2025 :
 
  Sur le fichier style.css : 
- - Ajout de responsive
+ - Ajout de responsive avec notamment un menu burger pour les petits écrans
+
+### Jeudi 1 mai 2025 :
+
+ Sur le fichier style.css : 
+ - Ajout de hover sur les photos de profil et sur les réseaux sociaux du footer
+
+ Sur le fichier script.js : 
+ - Petit ménage avec ajout de commentaires
