@@ -459,7 +459,9 @@ nav p {
 #how-to-become-volunteer-steps {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    gap: 1rem;
+    justify-content: center;
+    /* justify-content: space-evenly; */
 
     @media screen and (max-width: 880px) {
         flex-direction: column;
@@ -472,7 +474,7 @@ nav p {
     box-shadow: var(--shadow-xl);
     padding: 0 40px;
     margin: 10px 10px 70px 10px;
-    width: 15%;
+    width: 80%;
     box-sizing: border-box;
 
     @media screen and (max-width: 880px) {
@@ -853,4 +855,39 @@ hr {
 /* *** *** *** ANY QUESTION SECTION *** *** *** */
 #any-questions {
     margin-top: 100px;
+}
+
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+/* *** *** *** *** *** *** PAGE UNDER CONSTRUCTION *** *** *** *** */
+/* *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** */
+
+#under-construction {
+    display: flex;
+    flex-direction: column;
+}
+#under-construction-img {
+    height: 400px;
+    background-image: url(./images/christopher-burns-8KfCR12oeUM-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width: 550px) {
+        height: 300px;
+
+        @media screen and (max-width: 450px) {
+            height: 200px;
+        }
+    }
+}
+
+#under-construction-text {
+    padding: 20px;
+}
+
+#under-construction a {
+    color: var(--dark-color);
+}
+
+#under-construction a:hover {
+    text-decoration: underline;
 }

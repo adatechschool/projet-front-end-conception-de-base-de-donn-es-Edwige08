@@ -68,3 +68,10 @@
 
  Sur le fichier script.js : 
  - Petit ménage avec ajout de commentaires
+
+### Vendredi 2 mai 2025 :
+
+ Sur le fichier style.css : 
+ - ajout de responsive sur le form de volunteeer.html et sur les h2
+
+ Création de la page under_construction.html pour diriger les liens morts
